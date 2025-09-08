@@ -85858,22 +85858,21 @@ $S:501}
 A.HT.prototype={
 N(a){var s,r,q,p,o,n,m,l,k,j,i,h=null,g=" Flutter Developer",f=A.bn(a,h,t.w).w.a.a,e=$.au()
 e=A.bA(h,100*Math.min(e.gaF(),e.gaE()),h)
-s=$.au()
-s=Math.min(s.gaF(),s.gaE())
-r=f<600
-if(r){q=$.au()
+s=f<600
+r=s?15:30
+if(s){q=$.au()
 q=80*Math.min(q.gaF(),q.gaE())}else{q=$.au()
-q=150*Math.min(q.gaF(),q.gaE())}p=r?A.bA(h,h,f*0.05):B.N7
-o=A.c2("Hi\ud83d\udc4b, It's Me ",h,h,h,h,A.bP(h,h,B.k,h,h,h,h,h,h,h,h,r?24:40,h,h,B.a6,h,h,!0,h,h,h,h,h,h,h,h),h,h)
-n=A.c2("RWAN HOSSAM",h,h,h,h,A.bP(h,h,B.lG,h,h,h,h,h,h,h,h,r?28:50,h,h,B.a6,h,h,!0,h,h,h,h,h,h,h,h),h,h)
-m=A.c2("I'm a",h,h,h,h,A.bP(h,h,B.k,h,h,h,h,h,h,h,h,r?22:40,h,h,B.a6,h,h,!0,h,h,h,h,h,h,h,h),h,h)
-l=r?200:400
-k=A.bP(h,h,B.lG,h,h,h,h,h,h,h,h,r?25:45,h,h,B.a6,h,h,!0,h,h,h,h,h,h,h,h)
+q=150*Math.min(q.gaF(),q.gaE())}p=s?A.bA(h,h,f*0.05):B.N7
+o=A.c2("Hi\ud83d\udc4b, It's Me ",h,h,h,h,A.bP(h,h,B.k,h,h,h,h,h,h,h,h,s?24:40,h,h,B.a6,h,h,!0,h,h,h,h,h,h,h,h),h,h)
+n=A.c2("RWAN HOSSAM",h,h,h,h,A.bP(h,h,B.lG,h,h,h,h,h,h,h,h,s?28:50,h,h,B.a6,h,h,!0,h,h,h,h,h,h,h,h),h,h)
+m=A.c2("I'm a",h,h,h,h,A.bP(h,h,B.k,h,h,h,h,h,h,h,h,s?22:40,h,h,B.a6,h,h,!0,h,h,h,h,h,h,h,h),h,h)
+l=s?200:400
+k=A.bP(h,h,B.lG,h,h,h,h,h,h,h,h,s?25:45,h,h,B.a6,h,h,!0,h,h,h,h,h,h,h,h)
 j=B.f.a2(4e4*new A.d3(g).gA(0))
 i=t.D
-l=A.ix(A.b([new A.cb(new A.as(30*s,0,0,0),new A.Hm(B.zi,q,h),h),p,A.a0X(A.fE(A.b([o,n,A.ix(A.b([m,A.bA(new A.vX(A.b([new A.BI(g,B.au,k,new A.aL(j),new A.d3(g))],t.u6),B.ft,!0,h),h,l)],i),B.a5,B.a7,B.a4)],i),B.b0,B.a7,B.a4),1)],i),B.a5,B.a7,B.a4)
-s=r?150:300
-return A.hj(h,A.acW(A.fE(A.b([e,l,new A.cb(B.D4,A.ix(A.b([A.a4N("assets/lotties/Flutter.json",r?150:300,h,s)],i),B.a5,B.h2,B.a4),h)],i),B.a5,B.a7,B.a4),h,B.aA),B.C,h,h,B.zT,h,h,h,h,h,h,f)}}
+l=A.ix(A.b([new A.cb(new A.as(r,0,0,0),new A.Hm(B.zi,q,h),h),p,A.a0X(A.fE(A.b([o,n,A.ix(A.b([m,A.bA(new A.vX(A.b([new A.BI(g,B.au,k,new A.aL(j),new A.d3(g))],t.u6),B.ft,!0,h),h,l)],i),B.a5,B.a7,B.a4)],i),B.b0,B.a7,B.a4),1)],i),B.a5,B.a7,B.a4)
+r=s?150:300
+return A.hj(h,A.acW(A.fE(A.b([e,l,new A.cb(B.D4,A.ix(A.b([A.a4N("assets/lotties/Flutter.json",s?150:300,h,r)],i),B.a5,B.h2,B.a4),h)],i),B.a5,B.a7,B.a4),h,B.aA),B.C,h,h,B.zT,h,h,h,h,h,h,f)}}
 A.IA.prototype={
 N(a){var s=null,r=A.bn(a,s,t.w).w.a.a,q=$.au()
 q=50*Math.min(q.gaF(),q.gaE())
