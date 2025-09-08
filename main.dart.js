@@ -85859,7 +85859,7 @@ A.HT.prototype={
 N(a){var s,r,q,p,o,n,m,l,k,j,i,h=null,g=" Flutter Developer",f=A.bn(a,h,t.w).w.a.a,e=$.au()
 e=A.bA(h,100*Math.min(e.gaF(),e.gaE()),h)
 s=f<600
-r=s?15:30
+r=s?5:40
 if(s){q=$.au()
 q=80*Math.min(q.gaF(),q.gaE())}else{q=$.au()
 q=150*Math.min(q.gaF(),q.gaE())}p=s?A.bA(h,h,f*0.05):B.N7
