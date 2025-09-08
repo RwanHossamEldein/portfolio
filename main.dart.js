@@ -85862,7 +85862,7 @@ s=f<600
 r=s?5:40
 if(s){q=$.au()
 q=80*Math.min(q.gaF(),q.gaE())}else{q=$.au()
-q=150*Math.min(q.gaF(),q.gaE())}p=s?A.bA(h,h,f*0.05):B.N7
+q=150*Math.min(q.gaF(),q.gaE())}p=s?A.bA(h,h,f*0.03):B.N7
 o=A.c2("Hi\ud83d\udc4b, It's Me ",h,h,h,h,A.bP(h,h,B.k,h,h,h,h,h,h,h,h,s?24:40,h,h,B.a6,h,h,!0,h,h,h,h,h,h,h,h),h,h)
 n=A.c2("RWAN HOSSAM",h,h,h,h,A.bP(h,h,B.lG,h,h,h,h,h,h,h,h,s?28:50,h,h,B.a6,h,h,!0,h,h,h,h,h,h,h,h),h,h)
 m=A.c2("I'm a",h,h,h,h,A.bP(h,h,B.k,h,h,h,h,h,h,h,h,s?22:40,h,h,B.a6,h,h,!0,h,h,h,h,h,h,h,h),h,h)
