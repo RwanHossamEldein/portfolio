@@ -85881,7 +85881,7 @@ $2(a,b){var s=null,r=this.a.c.a,q=r[b].h(0,"image"),p=this.b<600,o=p?60:100,n=p?
 o=A.auZ(s,n,new A.iY(q,s,s),o)
 q=A.bA(s,s,10)
 p=p?300:600
-return A.ix(A.b([o,q,A.bA(A.c2(r[b].h(0,"name"),s,s,s,s,A.bP(s,s,B.k,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),s,p)],t.D),B.a6,B.a7,B.a5)},
+return A.ix(A.b([o,q,A.bA(A.c2(r[b].h(0,"name"),s,s,s,!0,A.bP(s,s,B.k,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),s,p)],t.D),B.a6,B.a7,B.a5)},
 $S:502}
 A.Kl.prototype={
 N(a){return new A.An(new A.a89(),!0,!0,new A.D(375,812),null)}}
@@ -85901,7 +85901,7 @@ s.toString
 return r.b+s}return 0},
 rn(a){$.a0.k3$.push(new A.akC(this,a))},
 N(a){var s=this,r=null,q=A.mv(a).Ts(A.bS([B.ar,B.aF],t.A)),p=A.al(255,55,142,205),o=t.N,n=t.z
-return new A.Ah(!0,new A.I0(new A.akB(s),r),A.awL(q,A.awN(A.acW(A.fE(A.b([new A.HT(s.e),new A.Gs(s.f),new A.IA(new A.a0k(A.b([A.ac(["name","Student at the Faculty of Science,\nComputer Science Department (2022\u20132026)","image","assets/images/faculty.png"],o,n),A.ac(["name","Trainee -Cross Platform Mobile App Development at Digital Egypt Pioneers Initiative - DEPI","image","assets/images/depi.jpg"],o,n)],t.H7)),s.r),new A.MG(s.w),new A.zz(r),new A.Nk(new A.adO(A.b([A.ac(["image","assets/images/testimonials.jpg","text","I had the privilege of leading Rwan in the Flutter Committee of the HackerRank Campus Club, AUFS, where she consistently demonstrated exceptional reliability and commitment","person","\u2014 Zyad Wael\u060c Head Of Flutter Committee of the HackerRank Campus Club, AUFS"],n,n)],t.n4)),r),new A.wO(s.x),B.S7],t.D),B.a6,B.a7,B.a5),s.d,B.aA),new A.tC(r,r,r,r,r,new A.bp(p,t.rc),r,r,r,r,r))),r)}}
+return new A.Ah(!0,new A.I0(new A.akB(s),r),A.awL(q,A.awN(A.acW(A.fE(A.b([new A.HT(s.e),new A.Gs(s.f),new A.IA(new A.a0k(A.b([A.ac(["name","Student at the Faculty of Science,Computer Science Department (2022\u20132026)","image","assets/images/faculty.png"],o,n),A.ac(["name","Trainee -Cross Platform Mobile App Development at Digital Egypt Pioneers Initiative - DEPI","image","assets/images/depi.jpg"],o,n)],t.H7)),s.r),new A.MG(s.w),new A.zz(r),new A.Nk(new A.adO(A.b([A.ac(["image","assets/images/testimonials.jpg","text","I had the privilege of leading Rwan in the Flutter Committee of the HackerRank Campus Club, AUFS, where she consistently demonstrated exceptional reliability and commitment","person","\u2014 Zyad Wael\u060c Head Of Flutter Committee of the HackerRank Campus Club, AUFS"],n,n)],t.n4)),r),new A.wO(s.x),B.S7],t.D),B.a6,B.a7,B.a5),s.d,B.aA),new A.tC(r,r,r,r,r,new A.bp(p,t.rc),r,r,r,r,r))),r)}}
 A.akC.prototype={
 $1(a){var s=this.a
 s.d.iV(s.a6Q(this.b),B.e2,B.d2)},
