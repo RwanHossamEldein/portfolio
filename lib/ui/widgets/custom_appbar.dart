@@ -2,63 +2,65 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final ScrollController scrollController;
-  final Map<String, double> sectionOffsets;
+  final Function(String) onSectionSelected;
 
-  const CustomAppBar({
-    super.key,
-    required this.scrollController,
-    required this.sectionOffsets,
-  });
-
-  void scrollTo(String section) {
-    final offset = sectionOffsets[section] ?? 0;
-    scrollController.animateTo(
-      offset,
-      duration: const Duration(milliseconds: 600),
-      curve: Curves.easeInOut,
-    );
-  }
+  const CustomAppBar({super.key, required this.onSectionSelected});
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
       actions: [
         TextButton(
-          onPressed: () => scrollTo("cover"),
+          onPressed: () => onSectionSelected("cover"),
           child: Text(
             "Cover",
-            style: TextStyle(color: Colors.white, fontSize: 20.r),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: width < 600 ? 15 : 20,
+            ),
           ),
         ),
         TextButton(
-          onPressed: () => scrollTo("about"),
+          onPressed: () => onSectionSelected("about"),
           child: Text(
             "About",
-            style: TextStyle(color: Colors.white, fontSize: 20.r),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: width < 600 ? 15 : 20,
+            ),
           ),
         ),
         TextButton(
-          onPressed: () => scrollTo("education"),
+          onPressed: () => onSectionSelected("education"),
           child: Text(
             "Education",
-            style: TextStyle(color: Colors.white, fontSize: 20.r),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: width < 600 ? 15 : 20,
+            ),
           ),
         ),
         TextButton(
-          onPressed: () => scrollTo("skills"),
+          onPressed: () => onSectionSelected("skills"),
           child: Text(
             "Skills",
-            style: TextStyle(color: Colors.white, fontSize: 20.r),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: width < 600 ? 15 : 20,
+            ),
           ),
         ),
         TextButton(
-          onPressed: () => scrollTo("contact"),
+          onPressed: () => onSectionSelected("contact"),
           child: Text(
             "Contact Me",
-            style: TextStyle(color: Colors.white, fontSize: 20.r),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: width < 600 ? 15 : 20,
+            ),
           ),
         ),
       ],
@@ -66,5 +68,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight.r);
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }

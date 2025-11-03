@@ -9,11 +9,12 @@ class Skills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     TechnicalSkills technicalSkills = TechnicalSkills();
     SoftSkils softSkils = SoftSkils();
 
     return Container(
-      width: MediaQuery.of(context).size.width,
+      width: width,
 
       color: Colors.black,
       padding: EdgeInsets.all(20.r),
@@ -38,8 +39,9 @@ class Skills extends StatelessWidget {
                   'technical skills',
                   style: TextStyle(
                     fontFamily: 'MajorMonoDisplay',
-                    color: const Color.fromARGB(255, 40, 158, 212),
-                    fontSize: 40.r,
+                    color: Colors.blueAccent,
+                    fontSize: width < 600 ? 25 : 40,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
@@ -57,8 +59,9 @@ class Skills extends StatelessWidget {
                   'soft skills',
                   style: TextStyle(
                     fontFamily: 'MajorMonoDisplay',
-                    color: const Color.fromARGB(255, 40, 158, 212),
-                    fontSize: 40.r,
+                    color: Colors.blueAccent,
+                    fontSize: width < 600 ? 25 : 40,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],

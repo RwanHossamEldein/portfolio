@@ -7,6 +7,7 @@ class Thanks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Container(
       color: Colors.black,
       width: MediaQuery.of(context).size.width,
@@ -18,8 +19,8 @@ class Thanks extends StatelessWidget {
             'thank you',
             style: TextStyle(
               fontFamily: 'MajorMonoDisplay',
-              color: const Color.fromARGB(255, 40, 158, 212),
-              fontSize: 40.r,
+              color: Colors.blueAccent,
+              fontSize: width < 600 ? 30 : 40,
               fontWeight: FontWeight.bold,
             ),
           ),

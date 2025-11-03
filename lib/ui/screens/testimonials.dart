@@ -7,6 +7,7 @@ class Testimonials extends StatelessWidget {
   TestimonialsData testimonial1 = TestimonialsData();
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Container(
       decoration: BoxDecoration(color: Colors.black),
       width: MediaQuery.of(context).size.width,
@@ -20,11 +21,12 @@ class Testimonials extends StatelessWidget {
               'testimonials',
               style: TextStyle(
                 fontFamily: 'MajorMonoDisplay',
-                color: const Color.fromARGB(255, 40, 158, 212),
-                fontSize: 40.r,
+                color: Colors.blueAccent,
+                fontSize: width < 600 ? 30 : 40,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20.r),
+            SizedBox(height: 10.r),
             Expanded(
               child: ListView.builder(
                 itemCount: testimonial1.testimonial.length,
@@ -32,37 +34,29 @@ class Testimonials extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8.0),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          testimonial1.testimonial[index]['text'],
-                          style: TextStyle(color: Colors.white, fontSize: 20.r),
-                        ),
-                        SizedBox(height: 10.r),
-                        SizedBox(
+                        Image(
+                          image: AssetImage(
+                            testimonial1.testimonial[index]['image'],
+                          ),
                           height: 220.r,
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: Text(
-                                  testimonial1.testimonial[index]['person'],
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20.r,
-                                  ),
-                                ),
-                              ),
-
-                              Image(
-                                image: AssetImage(
-                                  testimonial1.testimonial[index]['image'],
-                                ),
-                                height: 220.r,
-                                width: 650.r,
-                                fit: BoxFit.cover,
-                              ),
-                            ],
+                          width: width < 600 ? 350 : 650,
+                          fit: BoxFit.contain,
+                        ),
+                        SizedBox(height: 10),
+                        SizedBox(
+                          width: width < 600 ? 300 : 600,
+                          child: Text(
+                            testimonial1.testimonial[index]['person'],
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: width < 600 ? 10 : 20,
+                            ),
+                            softWrap: true,
                           ),
                         ),
+                        Divider(thickness: 0.5, color: Colors.blueGrey),
                       ],
                     ),
                   );

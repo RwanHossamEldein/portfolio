@@ -1,57 +1,101 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:portofolio/ui/screens/about_me.dart';
 import 'package:portofolio/ui/screens/contact_me.dart';
 import 'package:portofolio/ui/screens/cover.dart';
 import 'package:portofolio/ui/screens/education.dart';
 import 'package:portofolio/ui/screens/projects.dart';
-
 import 'package:portofolio/ui/screens/skills.dart';
 import 'package:portofolio/ui/screens/testimonials.dart';
 import 'package:portofolio/ui/screens/thanks.dart';
 import 'package:portofolio/ui/screens/work_experience.dart';
 import 'package:portofolio/ui/widgets/custom_appbar.dart';
 
-class Portfolio extends StatelessWidget {
-  Portfolio({super.key});
+class Portfolio extends StatefulWidget {
+  const Portfolio({super.key});
 
+  @override
+  State<Portfolio> createState() => _PortfolioState();
+}
+
+class _PortfolioState extends State<Portfolio> {
   final ScrollController _scrollController = ScrollController();
 
-  final Map<String, double> sectionOffsets = {
-    "cover": 0,
-    "about": 850,
-    "education": 1400,
-    "skills": 2100,
-    "contact": 4800,
-  };
+  final coverKey = GlobalKey();
+  final aboutKey = GlobalKey();
+  final educationKey = GlobalKey();
+  final skillsKey = GlobalKey();
+  final contactKey = GlobalKey();
+
+  double _getOffset(GlobalKey key) {
+    final renderBox = key.currentContext?.findRenderObject() as RenderBox?;
+    if (renderBox != null) {
+      return renderBox
+              .localToGlobal(Offset.zero, ancestor: context.findRenderObject())
+              .dy +
+          _scrollController.offset;
+    }
+    return 0;
+  }
+
+  void scrollTo(GlobalKey key) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final offset = _getOffset(key);
+      _scrollController.animateTo(
+        offset,
+        duration: const Duration(milliseconds: 600),
+        curve: Curves.easeInOut,
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: CustomAppBar(
-        scrollController: _scrollController,
-        sectionOffsets: sectionOffsets,
+        onSectionSelected: (section) {
+          switch (section) {
+            case "cover":
+              scrollTo(coverKey);
+              break;
+            case "about":
+              scrollTo(aboutKey);
+              break;
+            case "education":
+              scrollTo(educationKey);
+              break;
+            case "skills":
+              scrollTo(skillsKey);
+              break;
+            case "contact":
+              scrollTo(contactKey);
+              break;
+          }
+        },
       ),
-      body: ScrollbarTheme(
-        data: ScrollbarThemeData(
-          thumbColor: MaterialStateProperty.all(
-            Color.fromARGB(255, 55, 142, 205),
-          ),
+      body: ScrollConfiguration(
+        behavior: ScrollConfiguration.of(context).copyWith(
+          dragDevices: {PointerDeviceKind.touch, PointerDeviceKind.trackpad},
         ),
-        child: Scrollbar(
-          controller: _scrollController,
+        child: ScrollbarTheme(
+          data: ScrollbarThemeData(
+            thumbColor: MaterialStateProperty.all(
+              Color.fromARGB(255, 55, 142, 205),
+            ),
+          ),
+
           child: SingleChildScrollView(
             controller: _scrollController,
             child: Column(
               children: [
-                const Cover(),
-                const AboutMe(),
-                const Education(),
-                const Skills(),
-                WorkExperience(),
+                Cover(key: coverKey),
+                AboutMe(key: aboutKey),
+                Education(key: educationKey),
+                Skills(key: skillsKey),
                 Projects(),
                 Testimonials(),
-                ContactMe(),
+                ContactMe(key: contactKey),
                 const Thanks(),
               ],
             ),

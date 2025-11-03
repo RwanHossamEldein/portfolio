@@ -15,8 +15,9 @@ ProjectsData dataProject = ProjectsData();
 class _ProjectsState extends State<Projects> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Container(
-      width: MediaQuery.of(context).size.width,
+      width: width,
 
       color: Colors.black,
       padding: EdgeInsets.all(20.r),
@@ -27,8 +28,9 @@ class _ProjectsState extends State<Projects> {
             'projects',
             style: TextStyle(
               fontFamily: 'MajorMonoDisplay',
-              color: const Color.fromARGB(255, 40, 158, 212),
-              fontSize: 40.r,
+              color: Colors.blueAccent,
+              fontSize: width < 600 ? 30 : 40,
+              fontWeight: FontWeight.bold,
             ),
           ),
           SizedBox(height: 30.r),

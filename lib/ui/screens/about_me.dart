@@ -7,8 +7,9 @@ class AboutMe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return Container(
-      width: MediaQuery.of(context).size.width,
+      width: width,
 
       color: Colors.black,
       padding: EdgeInsets.symmetric(vertical: 50.r, horizontal: 20.r),
@@ -20,21 +21,46 @@ class AboutMe extends StatelessWidget {
             style: TextStyle(
               color: Colors.blueAccent,
               fontFamily: 'MajorMonoDisplay',
-              fontSize: 30.r,
+              fontSize: width < 600 ? 20 : 40,
               decoration: TextDecoration.none,
+              fontWeight: FontWeight.bold,
             ),
           ),
           SizedBox(height: 20.r),
           SizedBox(
             width: 600.r,
-            child: Text(
-              'Passionate Computer Science student specializing in Flutter development. Experienced in building functional, well-structured mobile apps with clean UI. Knowledgeable in Clean Code and SOLID principles, with a strong passion for learning new technologies and continuously improving development skills. Also a tech writer, sharing insights and tutorials to help others in the developer community. Seeking an opportunity to apply my expertise in a real-world setting.',
-              style: TextStyle(
-                fontSize: 20.r,
-                color: Colors.white,
-                decoration: TextDecoration.none,
+            child: RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text:
+                        'Passionate Computer Science student specializing in Flutter development.Experienced in building functional, well-structured mobile apps with clean UI.',
+                    style: TextStyle(
+                      fontSize: 20.r,
+                      color: Colors.white,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                  TextSpan(
+                    text:
+                        ' Knowledgeable in Clean Code and SOLID principles, with a strong passion for learning new technologies and continuously improving development skills. Also a tech writer, sharing insights and tutorials to help others in the developer community.',
+                    style: TextStyle(
+                      fontSize: 20.r,
+                      color: Colors.blueAccent,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                  TextSpan(
+                    text:
+                        'Seeking an opportunity to apply my expertise in a real-world setting.',
+                    style: TextStyle(
+                      fontSize: 20.r,
+                      color: Colors.white,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                ],
               ),
-              softWrap: true,
             ),
           ),
           SizedBox(height: 30.r),
@@ -43,8 +69,8 @@ class AboutMe extends StatelessWidget {
               Spacer(),
               Lottie.asset(
                 'assets/lotties/Main Scene (1).json',
-                width: 400.r,
-                height: 400.r,
+                width: width < 600 ? 200 : 400,
+                height: width < 600 ? 200 : 400,
               ),
             ],
           ),
