@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:http/http.dart' as http;
-import 'package:portofolio/data/contact_data.dart';
-import 'package:portofolio/ui/widgets/custom_contact_icon.dart';
-import 'package:portofolio/ui/widgets/custom_text_feild.dart';
+import 'package:portfolio/data/contact_data.dart';
+import 'package:portfolio/ui/widgets/custom_contact_icon.dart';
+import 'package:portfolio/ui/widgets/custom_text_feild.dart';
 
 class ContactMe extends StatefulWidget {
   const ContactMe({super.key});

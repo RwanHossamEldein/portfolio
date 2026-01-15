@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:portofolio/data/testimonials_data.dart';
+import 'package:portfolio/data/testimonials_data.dart';
 
+// ignore: must_be_immutable
 class Testimonials extends StatelessWidget {
   Testimonials({super.key});
   TestimonialsData testimonial1 = TestimonialsData();

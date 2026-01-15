@@ -1,15 +1,14 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:portofolio/ui/screens/about_me.dart';
-import 'package:portofolio/ui/screens/contact_me.dart';
-import 'package:portofolio/ui/screens/cover.dart';
-import 'package:portofolio/ui/screens/education.dart';
-import 'package:portofolio/ui/screens/projects.dart';
-import 'package:portofolio/ui/screens/skills.dart';
-import 'package:portofolio/ui/screens/testimonials.dart';
-import 'package:portofolio/ui/screens/thanks.dart';
-import 'package:portofolio/ui/screens/work_experience.dart';
-import 'package:portofolio/ui/widgets/custom_appbar.dart';
+import 'package:portfolio/ui/screens/about_me.dart';
+import 'package:portfolio/ui/screens/contact_me.dart';
+import 'package:portfolio/ui/screens/cover.dart';
+import 'package:portfolio/ui/screens/education.dart';
+import 'package:portfolio/ui/screens/projects.dart';
+import 'package:portfolio/ui/screens/skills.dart';
+import 'package:portfolio/ui/screens/testimonials.dart';
+import 'package:portfolio/ui/screens/thanks.dart';
+import 'package:portfolio/ui/widgets/custom_appbar.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({super.key});

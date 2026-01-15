@@ -3,12 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// ignore: must_be_immutable
 class CustomContainer extends StatelessWidget {
   String image;
   String title;
   String description;
   String technologiesUsed;
-  String Link;
+  String link;
   final bool showButton;
 
   CustomContainer({
@@ -17,7 +18,7 @@ class CustomContainer extends StatelessWidget {
     required this.title,
     this.description = '',
     this.technologiesUsed = '',
-    this.Link = '',
+    this.link = '',
     this.showButton = true,
   });
 
@@ -64,20 +65,23 @@ class CustomContainer extends StatelessWidget {
           SizedBox(height: 10.r),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 7.r),
-            child: Text(
-              textAlign: TextAlign.center,
-              description,
-              style: TextStyle(
-                color: const Color.fromARGB(255, 120, 159, 239),
-                fontSize: 16.r,
-                fontWeight: FontWeight.bold,
+            child: SizedBox(
+              width: 200.w,
+              child: Text(
+                description,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color.fromARGB(255, 120, 159, 239),
+                  fontSize: 16.r,
+                  fontWeight: FontWeight.bold,
+                ),
+                softWrap: true,
               ),
-              softWrap: true,
             ),
           ),
           SizedBox(height: 10.r),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 7.r),
+          SizedBox(
+            width: 150.w,
             child: Text(
               textAlign: TextAlign.center,
               technologiesUsed,
@@ -99,7 +103,7 @@ class CustomContainer extends StatelessWidget {
                   child: LottieBuilder.asset('assets/lotties/GitHub icon.json'),
                 ),
                 TextButton(
-                  onPressed: () => _launchUrl(Link),
+                  onPressed: () => _launchUrl(link),
                   child: const Text('View Project'),
                 ),
               ],

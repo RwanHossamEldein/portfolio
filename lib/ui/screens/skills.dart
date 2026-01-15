@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:portofolio/data/soft_skils.dart';
-import 'package:portofolio/data/technical_skills.dart';
-import 'package:portofolio/ui/widgets/custom_stack_list.dart';
+import 'package:portfolio/data/soft_skils.dart';
+import 'package:portfolio/data/technical_skills.dart';
+import 'package:portfolio/ui/widgets/custom_stack_list.dart';
 
 class Skills extends StatelessWidget {
   const Skills({super.key});

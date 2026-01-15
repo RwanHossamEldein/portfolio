@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:portofolio/ui/screens/skills.dart';
-import 'package:portofolio/ui/widgets/custom_container.dart';
+import 'package:portfolio/ui/widgets/custom_container.dart';
 
 class CustomStackList extends StatefulWidget {
   const CustomStackList({super.key, required this.list});
@@ -37,7 +36,7 @@ class _CustomStackState extends State<CustomStackList> {
                   description: widget.list[index]['description'] ?? '',
                   technologiesUsed:
                       widget.list[index]['technologiesUsed'] ?? '',
-                  Link: widget.list[index]['Link'] ?? '',
+                  link: widget.list[index]['Link'] ?? '',
                   showButton: widget.list[index]['showButton'] ?? false,
                 ),
               );

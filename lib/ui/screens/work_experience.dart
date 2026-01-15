@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:portofolio/data/work_experience_data.dart';
+import 'package:portfolio/data/work_experience_data.dart';
 
+// ignore: must_be_immutable
 class WorkExperience extends StatelessWidget {
   WorkExperience({super.key});
   WorkExperienceData job1 = WorkExperienceData();
@@ -31,16 +32,16 @@ class WorkExperience extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                        width: 100.r,
-                        height: 100.r,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.r),
-                          image: DecorationImage(
-                              image: AssetImage(
-                                job1.workExperience[index]['logo'],
-                              ),
-                              fit: BoxFit.cover),
-                        )),
+                      width: 100.r,
+                      height: 100.r,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20.r),
+                        image: DecorationImage(
+                          image: AssetImage(job1.workExperience[index]['logo']),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                     SizedBox(width: 20.r),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

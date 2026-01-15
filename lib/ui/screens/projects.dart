@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:portofolio/data/projects_data.dart';
-import 'package:portofolio/ui/widgets/custom_stack_list.dart';
+import 'package:portfolio/data/projects_data.dart';
+import 'package:portfolio/ui/widgets/custom_stack_list.dart';
 
 class Projects extends StatefulWidget {
   const Projects({super.key});

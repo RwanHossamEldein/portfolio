@@ -68,8 +68,7 @@ class Cover extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
-                          SizedBox(
-                            width: width < 600 ? 150 : 400,
+                          Expanded(
                             child: AnimatedTextKit(
                               animatedTexts: [
                                 TyperAnimatedText(

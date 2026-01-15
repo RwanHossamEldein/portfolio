@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:portofolio/data/education_data.dart';
+import 'package:portfolio/data/education_data.dart';
 
+// ignore: must_be_immutable
 class Education extends StatelessWidget {
   Education({super.key});
   EducationData educationData = EducationData();
@@ -40,8 +40,7 @@ class Education extends StatelessWidget {
                     height: width < 600 ? 60 : 100,
                   ),
                   SizedBox(width: 10),
-                  SizedBox(
-                    width: width < 600 ? 300 : 600,
+                  Expanded(
                     child: Text(
                       educationData.educationDataList[index]['name'],
                       style: TextStyle(color: Colors.white),
