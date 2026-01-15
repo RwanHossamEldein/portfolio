@@ -53,6 +53,7 @@ class _ContactMeState extends State<ContactMe> {
       );
 
       if (response.statusCode == 200) {
+        // ignore: use_build_context_synchronously
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Message sent successfully!')),
         );
@@ -61,11 +62,13 @@ class _ContactMeState extends State<ContactMe> {
         messageController.clear();
       } else {
         ScaffoldMessenger.of(
+          // ignore: use_build_context_synchronously
           context,
         ).showSnackBar(SnackBar(content: Text('Failed: ${response.body}')));
       }
     } catch (e) {
       ScaffoldMessenger.of(
+        // ignore: use_build_context_synchronously
         context,
       ).showSnackBar(SnackBar(content: Text('Error: $e')));
     }

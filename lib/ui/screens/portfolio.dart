@@ -79,6 +79,7 @@ class _PortfolioState extends State<Portfolio> {
         ),
         child: ScrollbarTheme(
           data: ScrollbarThemeData(
+            // ignore: deprecated_member_use
             thumbColor: MaterialStateProperty.all(
               Color.fromARGB(255, 55, 142, 205),
             ),
